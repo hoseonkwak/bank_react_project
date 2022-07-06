@@ -4,9 +4,7 @@ const Header = () => {
   return (
     <header className="main_header">
       <div className="profile">
-        <a href="#">
-          <img src={User} alt="profile" />
-        </a>
+        <img src={User} alt="profile" />
       </div>
       <h3 className="account_name">생활비</h3>
       {/* <ul className="search_area">

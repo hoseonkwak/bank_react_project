@@ -8,24 +8,16 @@ const Menu = () => {
     <nav className="menu">
       <ul className="menu_area">
         <li className="on">
-          <a href="#">
-            <img src={Home} alt="" />
-          </a>
+          <img src={Home} alt="home" />
         </li>
         <li>
-          <a href="#">
-            <img src={MenuIcon2} alt="" />
-          </a>
+          <img src={MenuIcon2} alt="거래내역" />
         </li>
         <li>
-          <a href="#">
-            <img src={Message} alt="" />
-          </a>
+          <img src={Message} alt="메시지" />
         </li>
         <li>
-          <a href="#">
-            <img src={MenuBtn} alt="" />
-          </a>
+          <img src={MenuBtn} alt="메뉴" />
         </li>
       </ul>
     </nav>
