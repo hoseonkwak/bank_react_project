@@ -6,7 +6,7 @@ const Header = () => {
       <div className="profile">
         <img src={User} alt="profile" />
       </div>
-      <h3 className="account_name">생활비</h3>
+      <h3 className="account_name">{}계좌</h3>
       {/* <ul className="search_area">
         <li>
           <img src="./common/img/simple_payment.svg" alt="간편결제" />
