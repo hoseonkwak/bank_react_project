@@ -17,9 +17,7 @@ const NotLogin = () => {
       <button className="loginBtn" onClick={openLogin}>
         LOGIN
       </button>
-      <Login open={showLogin} close={closeLogin}>
-        ss
-      </Login>
+      <Login open={showLogin} close={closeLogin}></Login>
     </div>
   );
 };

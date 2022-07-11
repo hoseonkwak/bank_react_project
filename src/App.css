@@ -102,6 +102,7 @@ nav.menu .menu_area li.on img {
   border-radius: 10px;
   box-shadow: 2px 2px 4px 0 #cb9f6c;
   cursor: pointer;
+  font-size: 18px;
 }
 /* login modal */
 .loginModalArea {
@@ -124,7 +125,35 @@ nav.menu .menu_area li.on img {
   top: 50%;
   transform: translate(-50%, -50%);
   width: 80%;
-  height: 70%;
+  height: 60%;
   background: #fff;
   border-radius: 10px;
+}
+.loginModalArea .loginModal .closeBtn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  cursor: pointer;
+}
+.loginModalArea .loginModal .main {
+  margin-top: 40px;
+}
+.loginModalArea .loginModal .main > h3 {
+  font-size: 28px;
+  margin-bottom: 80px;
+}
+.loginModalArea .loginModal .main .login-form {
+  width: 80%;
+  margin: 0 auto;
+}
+.loginModalArea .loginModal .main .login-form .login-form-button {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+}
+.loginModalArea .loginModal .main .login-form .loginBtnArea {
+  text-align: left;
+  font-size: 12px;
+  font-weight: 400;
 }
