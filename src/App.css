@@ -1,4 +1,5 @@
 .wrap {
+  position: relative;
   width: 375px;
   height: 768px;
   background: #eeece5;
@@ -100,4 +101,30 @@ nav.menu .menu_area li.on img {
   color: #fff;
   border-radius: 10px;
   box-shadow: 2px 2px 4px 0 #cb9f6c;
+  cursor: pointer;
+}
+/* login modal */
+.loginModalArea {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 3;
+}
+.loginModalArea.open {
+  display: block;
+}
+
+.loginModalArea .loginModal {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 70%;
+  background: #fff;
+  border-radius: 10px;
 }
