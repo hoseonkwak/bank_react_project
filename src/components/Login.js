@@ -1,6 +1,7 @@
 import "antd/dist/antd.css";
 import { LockOutlined, UserOutlined, MailOutlined } from "@ant-design/icons";
 import { Form, Icon, Input, Button, Checkbox } from "antd";
+import { Link } from "react-router-dom";
 
 const Login = (props) => {
   const { open, close } = props;
@@ -68,7 +69,7 @@ const Login = (props) => {
                   >
                     로그인
                   </Button>
-                  또는 <a href="">회원가입</a>
+                  또는 <Link to="/register">회원가입</Link>
                 </Form.Item>
               </Form>
             </div>

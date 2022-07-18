@@ -2,11 +2,12 @@ import "./set.css";
 import "./App.css";
 import Header from "./components/Header";
 import Menu from "./components/Menu";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import NotLogin from "./components/NotLogin";
 import { useEffect } from "react";
 import { useState } from "react";
 import getLogin from "./api/getLogin";
+import Register from "./components/Register";
 
 function App() {
   const [loginData, setLoginData] = useState();
@@ -25,6 +26,8 @@ function App() {
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<NotLogin />} />
+            <Route path="/register" element={<Register />} />
+            <Route path="*" element={<Navigate to="/" replace={false} />} />
           </Routes>
         </BrowserRouter>
         <Menu />
