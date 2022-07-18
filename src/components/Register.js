@@ -10,11 +10,30 @@ import {
   Row,
   Select,
 } from "antd";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 
-const Register = () => {
+const Register = (props) => {
+  const [showRegis, setShowRegis] = useState(false);
+
+  const openRegis = () => {
+    setShowRegis(true);
+  };
+  const closeRegis = () => {
+    setShowRegis(false);
+  };
+
   return (
     <>
-      <h1>dd</h1>
+      <div className="register_wrap">
+        <div className="registerModal_area">
+          <div className="registerModal">
+            <Link to="/" className="closeBtn">
+              &times;
+            </Link>
+          </div>
+        </div>
+      </div>
     </>
   );
 };

@@ -1,7 +1,8 @@
 import "antd/dist/antd.css";
-import { LockOutlined, UserOutlined, MailOutlined } from "@ant-design/icons";
-import { Form, Icon, Input, Button, Checkbox } from "antd";
+import { LockOutlined, MailOutlined } from "@ant-design/icons";
+import { Form, Input, Button } from "antd";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 const Login = (props) => {
   const { open, close } = props;
