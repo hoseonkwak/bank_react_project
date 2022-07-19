@@ -200,3 +200,14 @@ nav.menu .menu_area li.on img {
   cursor: pointer;
   color: #000;
 }
+.registerModal .main {
+  margin-top: 40px;
+}
+.registerModal .main h3 {
+  font-size: 28px;
+  margin-bottom: 40px;
+}
+.registerModal .main .register-form {
+  width: 80%;
+  margin: 0 auto;
+}
