@@ -14,6 +14,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 
 const Register = (props) => {
+  const { open, close } = props;
   const [showRegis, setShowRegis] = useState(false);
 
   const openRegis = () => {
@@ -24,17 +25,17 @@ const Register = (props) => {
   };
 
   return (
-    <>
-      <div className="register_wrap">
+    <div className={open ? "register_wrap open" : "register_wrap"}>
+      {open ? (
         <div className="registerModal_area">
           <div className="registerModal">
-            <Link to="/" className="closeBtn">
+            <button className="closeBtn" onClick={close}>
               &times;
-            </Link>
+            </button>
           </div>
         </div>
-      </div>
-    </>
+      ) : null}
+    </div>
   );
 };
 

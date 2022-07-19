@@ -157,12 +157,21 @@ nav.menu .menu_area li.on img {
   font-size: 12px;
   font-weight: 400;
 }
+.loginModalArea .loginModal .main .login-form .regisBtn {
+  color: #1890ff;
+  background: transparent;
+  cursor: pointer;
+}
 
 /* register */
 .register_wrap {
+  display: none;
   width: 100%;
   height: 622px;
   box-sizing: border-box;
+}
+.register_wrap.open {
+  display: block;
 }
 .register_wrap .registerModal_area {
   position: absolute;
@@ -170,7 +179,7 @@ nav.menu .menu_area li.on img {
   top: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  background: transparent;
   z-index: 3;
 }
 .register_wrap .registerModal_area .registerModal {
@@ -179,7 +188,7 @@ nav.menu .menu_area li.on img {
   top: 50%;
   transform: translate(-50%, -50%);
   width: 80%;
-  height: 60%;
+  height: 65%;
   background: #fff;
   border-radius: 10px;
 }

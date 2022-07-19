@@ -1,13 +1,21 @@
 import "antd/dist/antd.css";
 import { LockOutlined, MailOutlined } from "@ant-design/icons";
 import { Form, Input, Button } from "antd";
-import { Link } from "react-router-dom";
 import { useState } from "react";
+import Register from "./Register";
 
 const Login = (props) => {
   const { open, close } = props;
   const onFinish = (values) => {
     console.log("Received values of form: ", values);
+  };
+
+  const [showRegis, setShowRegis] = useState(false);
+  const oepnRegis = () => {
+    setShowRegis(true);
+  };
+  const closeRegis = () => {
+    setShowRegis(false);
   };
 
   return (
@@ -70,13 +78,17 @@ const Login = (props) => {
                   >
                     로그인
                   </Button>
-                  또는 <Link to="/register">회원가입</Link>
+                  또는{" "}
+                  <span className="regisBtn" onClick={oepnRegis}>
+                    회원가입
+                  </span>
                 </Form.Item>
               </Form>
             </div>
           </div>
         </>
       ) : null}
+      <Register open={showRegis} close={closeRegis}></Register>
     </div>
   );
 };

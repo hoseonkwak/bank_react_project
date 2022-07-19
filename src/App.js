@@ -26,7 +26,6 @@ function App() {
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<NotLogin />} />
-            <Route path="/register" element={<Register />} />
             <Route path="*" element={<Navigate to="/" replace={false} />} />
           </Routes>
         </BrowserRouter>
