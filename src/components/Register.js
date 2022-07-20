@@ -1,15 +1,4 @@
-import {
-  AutoComplete,
-  Button,
-  Cascader,
-  Checkbox,
-  Col,
-  Form,
-  Input,
-  InputNumber,
-  Row,
-  Select,
-} from "antd";
+import { Button, Form, Input } from "antd";
 import { LockOutlined, MailOutlined, UserOutlined } from "@ant-design/icons";
 import { useState } from "react";
 
@@ -94,6 +83,15 @@ const Register = (props) => {
                     type="password"
                     placeholder="Password"
                   />
+                </Form.Item>
+                <Form.Item className="regisBtnArea">
+                  <Button
+                    type="primary"
+                    htmlType="submit"
+                    className="regis-form-button"
+                  >
+                    회원가입
+                  </Button>
                 </Form.Item>
               </Form>
             </div>

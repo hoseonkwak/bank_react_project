@@ -211,3 +211,7 @@ nav.menu .menu_area li.on img {
   width: 80%;
   margin: 0 auto;
 }
+.registerModal .main .register-form .regis-form-button {
+  display: block;
+  width: 100%;
+}
