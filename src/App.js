@@ -8,15 +8,22 @@ import { useEffect } from "react";
 import { useState } from "react";
 import getLogin from "./api/getLogin";
 import Register from "./components/Register";
+import Account from "./components/Account";
 
 function App() {
+  const savedLoginHistory = localStorage.getItem("loginHistory");
+  const initialLoginHistory = savedLoginHistory
+    ? JSON.parse(savedLoginHistory)
+    : [];
+  const [loginHistory, setLoginHistory] = useState(initialLoginHistory);
+
   const [loginData, setLoginData] = useState();
 
   useEffect(() => {
-    const loginCall = async () => {
-      const loginData = await getLogin();
-    };
-    //loginCall();
+    console.log(loginHistory.length);
+    if (loginHistory.length === 0) {
+      return;
+    }
   });
 
   return (
@@ -25,7 +32,10 @@ function App() {
         <Header />
         <BrowserRouter>
           <Routes>
-            <Route path="/" element={<NotLogin />} />
+            <Route
+              path="/"
+              element={loginHistory.length === 0 ? <NotLogin /> : <Account />}
+            />
             <Route path="*" element={<Navigate to="/" replace={false} />} />
           </Routes>
         </BrowserRouter>

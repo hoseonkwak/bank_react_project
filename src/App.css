@@ -15,7 +15,7 @@ header.main_header {
   align-items: center;
 }
 header.main_header .profile {
-  margin-left: 27px;
+  margin-left: 20px;
   width: 43px;
   height: 43px;
   display: block;
@@ -32,6 +32,12 @@ header.main_header h3.account_name {
   left: 50%;
   transform: translate(-50%, -50%);
   user-select: none;
+}
+header.main_header .logoutBtn {
+  margin-right: 20px;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
 }
 header.main_header .search_area {
   display: flex;

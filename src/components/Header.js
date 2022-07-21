@@ -15,6 +15,7 @@ const Header = () => {
           <img src="./common/img/search.svg" alt="검색" />
         </li>
       </ul> */}
+      <button className="logoutBtn">로그아웃</button>
     </header>
   );
 };
