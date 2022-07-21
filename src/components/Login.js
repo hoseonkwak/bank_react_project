@@ -3,11 +3,36 @@ import { LockOutlined, MailOutlined } from "@ant-design/icons";
 import { Form, Input, Button } from "antd";
 import { useState } from "react";
 import Register from "./Register";
+import getLogin from "../api/getLogin";
 
 const Login = (props) => {
   const { open, close } = props;
-  const onFinish = (values) => {
-    console.log("Received values of form: ", values);
+  const [inputEmail, setInputEmail] = useState("");
+  const [inputPw, setInputPw] = useState("");
+  const [loginData, setLoginData] = useState({
+    email: "",
+    pw: "",
+  });
+
+  const onFinish = () => {
+    setLoginData({
+      email: inputEmail,
+      password: inputPw,
+    });
+    const call = async () => {
+      const data = await getLogin(loginData);
+      console.log(data);
+      console.log(data.data.accessToken);
+      localStorage.setItem(
+        "loginHistory",
+        JSON.stringify({
+          displayName: data.data.user.displayName,
+          accessToken: data.data.accessToken,
+        })
+      );
+      window.location.replace("/");
+    };
+    call();
   };
 
   const [showRegis, setShowRegis] = useState(false);
@@ -16,6 +41,14 @@ const Login = (props) => {
   };
   const closeRegis = () => {
     setShowRegis(false);
+  };
+  // email 입력
+  const handleChangeEmail = (e) => {
+    setInputEmail(e.target.value);
+  };
+  // pw 입력
+  const handleChangePw = (e) => {
+    setInputPw(e.target.value);
   };
 
   return (
@@ -53,6 +86,7 @@ const Login = (props) => {
                     prefix={<MailOutlined />}
                     type="email"
                     placeholder="E-mail"
+                    onChange={handleChangeEmail}
                   />
                 </Form.Item>
                 <Form.Item
@@ -68,6 +102,7 @@ const Login = (props) => {
                     prefix={<LockOutlined className="site-form-item-icon" />}
                     type="password"
                     placeholder="Password"
+                    onChange={handleChangePw}
                   />
                 </Form.Item>
                 <Form.Item className="loginBtnArea">

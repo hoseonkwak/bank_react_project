@@ -6,8 +6,6 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import NotLogin from "./components/NotLogin";
 import { useEffect } from "react";
 import { useState } from "react";
-import getLogin from "./api/getLogin";
-import Register from "./components/Register";
 import Account from "./components/Account";
 
 function App() {
@@ -17,14 +15,13 @@ function App() {
     : [];
   const [loginHistory, setLoginHistory] = useState(initialLoginHistory);
 
-  const [loginData, setLoginData] = useState();
-
   useEffect(() => {
+    console.log(initialLoginHistory);
     console.log(loginHistory.length);
     if (loginHistory.length === 0) {
       return;
     }
-  });
+  }, []);
 
   return (
     <>

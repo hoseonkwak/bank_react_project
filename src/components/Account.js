@@ -1,7 +1,7 @@
 const Account = () => {
   return (
     <>
-      <h1>dd</h1>
+      <h1>로그인 완료</h1>
     </>
   );
 };
